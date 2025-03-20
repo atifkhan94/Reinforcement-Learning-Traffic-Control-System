@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net version="1.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,200.00,200.00" origBoundary="0.00,0.00,200.00,200.00" projParameter="!" />
+    <edge id="E2" from="N2" to="N1" priority="1">
+        <lane id="E2_0" index="0" speed="13.89" length="90.00" shape="200.00,104.80 110.00,104.80" />
+        <lane id="E2_1" index="1" speed="13.89" length="90.00" shape="200.00,101.60 110.00,101.60" />
+    </edge>
+    <edge id="E3" from="N3" to="N1" priority="1">
+        <lane id="E3_0" index="0" speed="13.89" length="90.00" shape="104.80,0.00 104.80,90.00" />
+        <lane id="E3_1" index="1" speed="13.89" length="90.00" shape="101.60,0.00 101.60,90.00" />
+    </edge>
+    <edge id="E4" from="N4" to="N1" priority="1">
+        <lane id="E4_0" index="0" speed="13.89" length="90.00" shape="0.00,95.20 90.00,95.20" />
+        <lane id="E4_1" index="1" speed="13.89" length="90.00" shape="0.00,98.40 90.00,98.40" />
+    </edge>
+    <edge id="E5" from="N5" to="N1" priority="1">
+        <lane id="E5_0" index="0" speed="13.89" length="90.00" shape="95.20,200.00 95.20,110.00" />
+        <lane id="E5_1" index="1" speed="13.89" length="90.00" shape="98.40,200.00 98.40,110.00" />
+    </edge>
+    <junction id="N1" type="traffic_light" x="100.00" y="100.00" incLanes="E2_0 E2_1 E3_0 E3_1 E4_0 E4_1 E5_0 E5_1" intLanes="" shape="110.00,110.00 110.00,90.00 90.00,90.00 90.00,110.00">
+        <request index="0" response="0000" foes="1100" cont="0"/>
+        <request index="1" response="0000" foes="1100" cont="0"/>
+        <request index="2" response="0011" foes="0011" cont="0"/>
+        <request index="3" response="0011" foes="0011" cont="0"/>
+    </junction>
+    <connection from="E2" to="E4" fromLane="0" toLane="0" via=":N1_0_0" tl="intersection" linkIndex="0" dir="s" state="O"/>
+    <connection from="E2" to="E4" fromLane="1" toLane="1" via=":N1_0_1" tl="intersection" linkIndex="1" dir="s" state="O"/>
+    <connection from="E3" to="E5" fromLane="0" toLane="0" via=":N1_1_0" tl="intersection" linkIndex="2" dir="s" state="o"/>
+    <connection from="E3" to="E5" fromLane="1" toLane="1" via=":N1_1_1" tl="intersection" linkIndex="3" dir="s" state="o"/>
+</net>
